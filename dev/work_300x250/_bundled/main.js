@@ -34,14 +34,15 @@ var ease = "power2.out";
 
 function start(data) {
 
-	var scale = .5 / 300;
+	var scale = .7 / 300;
 	var tl = init();
-	// console.log(scale*w);
+	var time = Math.min(scale * w, .5);
+	console.log(time);
 	tl.add("start");
-	tl.from(".paper", { duration: scale * w, clipPath: "polygon(100% 0%, 100% 0%, 100% 100%, 100% 100%)" }, "start");
+	tl.from(".paper", { duration: time, clipPath: "polygon(100% 0%, 100% 0%, 100% 100%, 100% 100%)" }, "start");
 	tl.from([".logo"], { opacity: 0, duration: .3 }, "start");
-	tl.from([".text", ".product"], { opacity: 0, duration: .3 }, "+=.3");
-	tl.from([".tag", ".cta"], { opacity: 0, duration: .3 }, "+=.3");
+	tl.from([".text", ".product"], { opacity: 0, duration: .3 }, "+=.35");
+	tl.from([".tag", ".cta"], { opacity: 0, duration: .3 }, "+=.6");
 }
 
 exports.size = size;
