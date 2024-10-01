@@ -41,9 +41,11 @@ function start(data) {
 	tl.add("start", "+=.7");
 	tl.from(".paper", { duration: time, clipPath: "polygon(100% 0%, 100% 0%, 100% 100%, 100% 100%)" }, "start");
 	tl.from([".logo"], { opacity: 0, y: "-=40", duration: .3 }, "+=.2");
-	tl.from([".text", ".product"], { opacity: 0, duration: .3 }, "+=.35");
+	tl.from([".text"], { opacity: 0, duration: .3 }, "+=.35");
+	tl.from([".product"], { opacity: 0, duration: .3 }, "+=.35");
+
 	tl.from([".tag"], { opacity: 0, duration: .3 }, "+=.3");
-	tl.from([".cta"], { opacity: 0, y: "+=20", duration: .3 }, "+=.5");
+	tl.from([".cta"], { opacity: 0, y: "+=30", ease: "back.out", duration: .4 }, "+=.6");
 }
 
 exports.size = size;
