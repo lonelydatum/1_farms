@@ -38,11 +38,12 @@ function start(data) {
 	var tl = init();
 	var time = Math.min(scale * w, .38);
 	console.log(time);
-	tl.add("start");
+	tl.add("start", "+=.7");
 	tl.from(".paper", { duration: time, clipPath: "polygon(100% 0%, 100% 0%, 100% 100%, 100% 100%)" }, "start");
-	tl.from([".logo"], { opacity: 0, duration: .3 }, "start");
+	tl.from([".logo"], { opacity: 0, y: "-=40", duration: .3 }, "+=.2");
 	tl.from([".text", ".product"], { opacity: 0, duration: .3 }, "+=.35");
-	tl.from([".tag", ".cta"], { opacity: 0, duration: .3 }, "+=.6");
+	tl.from([".tag"], { opacity: 0, duration: .3 }, "+=.3");
+	tl.from([".cta"], { opacity: 0, y: "+=20", duration: .3 }, "+=.5");
 }
 
 exports.size = size;
