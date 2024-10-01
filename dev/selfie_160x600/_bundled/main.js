@@ -34,9 +34,9 @@ var ease = "power2.out";
 
 function start(data) {
 
-	var scale = .7 / 300;
+	var scale = .6 / 300;
 	var tl = init();
-	var time = Math.min(scale * w, .5);
+	var time = Math.min(scale * w, .38);
 	console.log(time);
 	tl.add("start");
 	tl.from(".paper", { duration: time, clipPath: "polygon(100% 0%, 100% 0%, 100% 100%, 100% 100%)" }, "start");

@@ -35,9 +35,9 @@ const ease = "power2.out"
 
 function start(data){
 		
-	const scale = .7/300
+	const scale = .6/300
 	const tl = init()
-	const time = Math.min(scale*w, .5)
+	const time = Math.min(scale*w, .38)
 	console.log(time);
 	tl.add("start")
 	tl.from(".paper", {duration:time,  clipPath:"polygon(100% 0%, 100% 0%, 100% 100%, 100% 100%)"}, "start")
